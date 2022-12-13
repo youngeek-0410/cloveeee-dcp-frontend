@@ -54,18 +54,11 @@ const FirstLoadPart = styled("div", {
   width: "100vw",
   height: "100vh",
 });
-const MainPart = motion(styled("div", {}));
+export const MainPart = motion(styled("div", {}));
 
 export default RootContainer;
 
 const Root: React.FC<Props> = ({ project }) => {
   const senderNameList = project.text_messages.items.map((message) => message.sender_name);
-  return (
-    <HeroPart
-      receiverName={project.receiver_name}
-      topText={project.top_text}
-      topImage={project.top_image}
-      senderNameList={senderNameList}
-    />
-  );
+  return <HeroPart receiverName={project.receiver_name} />;
 };

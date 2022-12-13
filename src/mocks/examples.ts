@@ -36,6 +36,26 @@ export const exampleTextMessages: TextMessage[] = [
     text: "Thanks!!",
     sender_name: "いつき",
   },
+  {
+    text: "けいすーけです",
+    sender_name: "山田圭介",
+  },
+  {
+    text: "けいすーけです",
+    sender_name: "山田圭介",
+  },
+  {
+    text: "けいすーけです",
+    sender_name: "山田圭介",
+  },
+  {
+    text: "けいすーけです",
+    sender_name: "山田圭介",
+  },
+  {
+    text: "けいすーけです",
+    sender_name: "山田圭介",
+  },
 ];
 
 export const exampleSpotifyMusic: SpotifyMusic = {
