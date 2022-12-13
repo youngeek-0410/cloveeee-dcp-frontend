@@ -4,16 +4,7 @@ import { GetServerSideProps, NextPage } from "next";
 import { backendApiUrl } from "../../apiUrl";
 import { Project } from "../../domain/type";
 import { GeneralPageProps } from "../_app";
-
-type Props = {
-  project: Project;
-} & GeneralPageProps;
-
-const Page: NextPage<Props> = ({ project }) => {
-  return <div>{project.receiver_name}</div>;
-};
-
-export default Page;
+import Root from "../../Root";
 
 type GetProjectApiRequest = {
   text_message_limit: number;
@@ -22,10 +13,18 @@ type GetProjectApiRequest = {
 
 type GetProjectApiResponse = Project;
 
+type Props = {
+  project: Project;
+} & GeneralPageProps;
+
 /*
  * デジタル色紙のプレビューページ
  * プレビュー色紙はProjectデータが動的に変わるなのでSSRで配信する
  */
+const Page: NextPage<Props> = ({ project }) => {
+  return <Root project={project} />;
+};
+
 export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
   const { project_id } = ctx.query;
 
@@ -59,3 +58,5 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
     },
   };
 };
+
+export default Page;

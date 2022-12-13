@@ -1,3 +1,5 @@
+// TODO: api schema に合わせる形で snake_case になっているが、本当はcamelCaseにしたい
+
 export type Project = {
   project_id: string;
   receiver_name: string;
