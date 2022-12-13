@@ -1,4 +1,5 @@
-# HackU Kosen 2022 Frontend
+# HackU Kosen 2022 DCP Frontend
+DCP = Digital Color Paper
 
 
 ## Getting Started
