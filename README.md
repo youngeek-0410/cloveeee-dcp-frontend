@@ -1,4 +1,4 @@
-# HackU Kosen 2022 DCP Frontend
+# Cloveeee DCP Frontend
 DCP = Digital Color Paper
 
 
