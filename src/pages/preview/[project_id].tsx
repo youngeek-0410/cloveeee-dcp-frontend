@@ -4,6 +4,7 @@ import { GetServerSideProps, NextPage } from "next";
 import { backendApiUrl } from "../../apiUrl";
 import { Project } from "../../domain/type";
 import { GeneralPageProps } from "../_app";
+import Root from "../../Root";
 
 type GetProjectApiRequest = {
   text_message_limit: number;
@@ -21,7 +22,7 @@ type Props = {
  * プレビュー色紙はProjectデータが動的に変わるなのでSSRで配信する
  */
 const Page: NextPage<Props> = ({ project }) => {
-  return <div>{project.receiver_name}</div>;
+  return <Root project={project} />;
 };
 
 export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
