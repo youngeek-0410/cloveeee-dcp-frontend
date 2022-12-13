@@ -15,14 +15,12 @@ export type Project = {
 };
 
 export type TextMessage = {
-  type: "text";
   text: string;
   sender_name: string;
 };
 
 // TODO: 本当は { image: Image; } としたい
 export type ImageMessage = {
-  type: "image";
   sender_name: string;
 } & Image;
 
