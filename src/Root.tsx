@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 
 import { FirstLoadView } from "./common/FirstLoadView/FirstLoadView";
 import { Project } from "./domain/type";
-import { HeroPart } from "./HeroPart/HeroPart";
 import { styled } from "./stitches.config";
 
 type Props = {
@@ -60,5 +59,5 @@ export default RootContainer;
 
 const Root: React.FC<Props> = ({ project }) => {
   const senderNameList = project.text_messages.items.map((message) => message.sender_name);
-  return <HeroPart receiverName={project.receiver_name} />;
+  return <div></div>;
 };
