@@ -3,7 +3,7 @@ import { styled } from "../stitches.config";
 export const Base = styled("div", {
   width: "95%",
   margin: "0 auto",
-  padding: "60px 0",
+  padding: "50px 0",
 
   "& h2": {
     fontSize: "2rem",
