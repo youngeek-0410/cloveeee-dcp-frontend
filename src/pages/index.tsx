@@ -1,7 +1,7 @@
 import axios, { AxiosRequestConfig } from "axios";
 import { GetServerSideProps, NextPage } from "next";
 
-import { backendApiUrl } from "../apiUrl";
+import { backendApiUrl } from "../utils/apiUrl";
 import { Project } from "../domain/type";
 import RootContainer from "../Root";
 
