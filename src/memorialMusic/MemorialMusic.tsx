@@ -12,7 +12,11 @@ export const MemorialMusic: React.FC = () => {
         音楽
       </h2>
 
-      <p>再生ボタンを押すと音楽を聴くことができます</p>
+      <p>
+        あなたと聴いた思い出の曲です
+        <br />
+        再生ボタンを押すと音楽を聴くことができます
+      </p>
       <TmpMusicPlayer src="https://via.placeholder.com/350x200" alt="" />
     </Base>
   );
