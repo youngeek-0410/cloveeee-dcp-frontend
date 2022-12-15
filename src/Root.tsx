@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 
 import { FirstLoadView } from "./common/FirstLoadView/FirstLoadView";
 import { Project } from "./domain/type";
+import { MainContent } from "./MainContent";
 import { styled } from "./stitches.config";
 
 type Props = {
@@ -38,7 +39,7 @@ const RootContainer: React.FC<Props> = ({ project }) => {
             delay: 0.2,
           }}
         >
-          <Root project={project} />
+          <MainContent />
         </MainPart>
       )}
     </>
