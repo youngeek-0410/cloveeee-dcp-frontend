@@ -59,18 +59,7 @@ export const exampleTextMessages: TextMessage[] = [
 ];
 
 export const exampleSpotifyMusic: SpotifyMusic = {
-  name: "ジョジョ~その血の運命~",
-  external_url: "https://spotify.com/...",
-  preview_url: "https://spotify.com/...",
-  uri: "uri:ljadjoihjgsadih",
-  artist: {
-    name: "富永TOMMY弘明",
-    external_url: "https://spotify.com/...",
-  },
-  album: {
-    name: "ジョジョ~その血の運命~",
-    image_url: "https://spotify.com/...",
-  },
+  uri: "spotify:album:6uqewERWZ1vzfCcin1zFIp",
 };
 
 export const exampleProject: Project = {
