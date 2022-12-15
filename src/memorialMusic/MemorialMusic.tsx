@@ -1,7 +1,10 @@
 import React from "react";
 
+import { exampleSpotifyMusic } from "../mocks/examples";
 import { styled } from "../stitches.config";
 import { Base } from "../utils/ui";
+
+import { MusicPlayground } from "./MusicPlayground";
 
 export const MemorialMusic: React.FC = () => {
   return (
@@ -17,7 +20,7 @@ export const MemorialMusic: React.FC = () => {
         <br />
         再生ボタンを押すと音楽を聴くことができます
       </p>
-      <TmpMusicPlayer src="https://via.placeholder.com/350x200" alt="" />
+      <MusicPlayground spotifyMusic={exampleSpotifyMusic} />
     </Base>
   );
 };
