@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Header } from "./header/Header";
+import { Header } from "./common/Header";
 import { LeadText } from "./leadText/LeadText";
 import { MemorialMusic } from "./memorialMusic/MemorialMusic";
 import { MemorialPhoto } from "./memorialPhoto/MemorialPhoto";

@@ -2,7 +2,7 @@ import { motion, useAnimationControls } from "framer-motion";
 import React from "react";
 import Typed from "react-typed";
 
-import { styled } from "../stitches.config";
+import { styled } from "../../stitches.config";
 
 type Props = {
   receiverName: string;

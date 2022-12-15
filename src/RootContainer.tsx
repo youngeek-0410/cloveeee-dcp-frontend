@@ -1,7 +1,7 @@
 import { motion, useAnimationControls } from "framer-motion";
 import React, { useEffect, useState } from "react";
 
-import { FirstLoadView } from "./firstLoadView/FirstLoadView";
+import { FirstLoadView } from "./common/firstLoadView/FirstLoadView";
 import { Project } from "./domain/type";
 import { MainContent } from "./MainContent";
 import { styled } from "./stitches.config";
