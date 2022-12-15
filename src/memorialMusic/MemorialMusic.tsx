@@ -5,7 +5,7 @@ import { Base } from "../utils/ui";
 
 export const MemorialMusic: React.FC = () => {
   return (
-    <Base>
+    <Base markerColor="orange">
       <h2>
         思い出の
         <br />

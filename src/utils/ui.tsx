@@ -11,6 +11,19 @@ export const Base = styled("div", {
     letterSpacing: "0.1rem",
     lineHeight: "1.5",
     display: "inline",
-    background: "linear-gradient(transparent 60%, #ffdcb8 0%)",
+  },
+  variants: {
+    markerColor: {
+      orange: {
+        "& h2": {
+          background: "linear-gradient(transparent 60%, #ffdcb8 0%)",
+        },
+      },
+      red: {
+        "& h2": {
+          background: "linear-gradient(transparent 60%, #ffb8b8 0%)",
+        },
+      },
+    },
   },
 });
