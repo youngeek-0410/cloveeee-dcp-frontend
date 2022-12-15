@@ -3,6 +3,7 @@ import { GetServerSideProps, NextPage } from "next";
 
 // import { backendApiUrl } from "../utils/apiUrl";
 import { Project } from "../domain/type";
+import { exampleProject } from "../mocks/examples";
 import { RootContainer } from "../RootContainer";
 
 type GetProjectApiRequest = {
@@ -17,7 +18,7 @@ type Props = {
 };
 
 const Page: NextPage<Props> = ({ project }) => {
-  return <RootContainer project={project} />;
+  return <RootContainer project={exampleProject} />;
 };
 
 export default Page;

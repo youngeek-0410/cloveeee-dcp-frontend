@@ -5,6 +5,7 @@ import { backendApiUrl } from "../../utils/apiUrl";
 import { Project } from "../../domain/type";
 import { GeneralPageProps } from "../_app";
 import { RootContainer } from "../../RootContainer";
+import { exampleProject } from "../../mocks/examples";
 
 type GetProjectApiRequest = {
   text_message_limit: number;
@@ -22,7 +23,7 @@ type Props = {
  * プレビュー色紙はProjectデータが動的に変わるなのでSSRで配信する
  */
 const Page: NextPage<Props> = ({ project }) => {
-  return <RootContainer project={project} />;
+  return <RootContainer project={exampleProject} />;
 };
 
 export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {

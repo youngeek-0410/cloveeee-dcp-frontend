@@ -1,21 +1,22 @@
 import React from "react";
 
 import { Header } from "./common/Header";
-import { LeadText } from "./leadText/LeadText";
-import { MemorialMusic } from "./memorialMusic/MemorialMusic";
-import { MemorialPhoto } from "./memorialPhoto/MemorialPhoto";
+import { LeadTextPart } from "./leadText/LeadTextPart";
+import { MemorialMusicPart } from "./memorialMusic/MemorialMusicPart";
+import { MemorialPhotoPart } from "./memorialPhoto/MemorialPhotoPart";
 import { Footer } from "./common/Footer";
-import { TextMessage } from "./textMessage/TextMessage";
+import { TextMessagePart } from "./textMessage/TextMessagePart";
+import { Project } from "./domain/type";
 
-export const MainContent: React.FC = () => {
+export const MainContent: React.FC<{ project: Project }> = ({ project }) => {
   return (
     <>
-      <Header />
-      <LeadText />
-      <MemorialMusic />
-      <MemorialPhoto />
-      <TextMessage />
-      <Footer />
+      <Header topText={project.top_text} receiverName={project.receiver_name} />
+      <LeadTextPart photoUrl={project.image_messages.items} />
+      <MemorialMusicPart spotifyMusic={project.spotify_music} />
+      <MemorialPhotoPart photos={project.image_messages.items} />
+      <TextMessagePart textMessages={project.text_messages.items} />
+      <Footer textMessages={project.text_messages.items} />
     </>
   );
 };

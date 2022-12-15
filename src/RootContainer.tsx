@@ -7,7 +7,7 @@ import { MainContent } from "./MainContent";
 import { styled } from "./stitches.config";
 
 type Props = {
-  project?: Project;
+  project: Project;
 };
 
 export const RootContainer: React.FC<Props> = ({ project }) => {
@@ -28,7 +28,7 @@ export const RootContainer: React.FC<Props> = ({ project }) => {
     <>
       {!isFirstLoadCompoleted ? (
         <FirstLoadPart>
-          <FirstLoadView receiverName="山田けいすけ" onLoadComplete={onFirstLoadComplete} />
+          <FirstLoadView receiverName={project.receiver_name} onLoadComplete={onFirstLoadComplete} />
         </FirstLoadPart>
       ) : (
         <motion.div
@@ -39,7 +39,7 @@ export const RootContainer: React.FC<Props> = ({ project }) => {
             delay: 0.2,
           }}
         >
-          <MainContent />
+          <MainContent project={project} />
         </motion.div>
       )}
     </>

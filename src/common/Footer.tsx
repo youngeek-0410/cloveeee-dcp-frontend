@@ -1,22 +1,18 @@
 import React from "react";
 
+import { TextMessage } from "../domain/type";
 import { styled } from "../stitches.config";
 
-export const Footer: React.FC = () => {
+export const Footer: React.FC<{ textMessages: TextMessage[] }> = ({ textMessages }) => {
   return (
     <>
       <StyledFooter>
         <Senders>
           <h3>メッセージをくれた人たち</h3>
           <SenderNameList>
-            <li>市古 空</li>
-            <li>藤森和馬</li>
-            <li>Michele Fanshaw</li>
-            <li>佐川智嗣</li>
-            <li>豊田伸</li>
-            <li>Manuel Crimpe</li>
-            <li>井沢愛香</li>
-            <li>小倉紗穂里</li>
+            {textMessages.map((textMessage, i) => {
+              return <li key={i}>{textMessage.sender_name}</li>;
+            })}
           </SenderNameList>
         </Senders>
         <Copyright>
@@ -64,10 +60,10 @@ const SenderNameList = styled("ul", {
 });
 
 const Copyright = styled("p", {
-  borderTop: "1px solid $grey",
+  borderTop: "1px solid $gray",
   margin: 0,
   padding: "8px 0",
-  color: "$grey",
+  color: "$gray",
   textAlign: "center",
   fontSize: "12px",
 });
