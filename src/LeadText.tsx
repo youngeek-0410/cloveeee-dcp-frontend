@@ -1,6 +1,7 @@
 import React from "react";
 
 import { styled } from "./stitches.config";
+import { Base } from "./utils/ui";
 
 export const LeadText: React.FC = () => {
   return (
@@ -17,26 +18,13 @@ export const LeadText: React.FC = () => {
       </p>
 
       {/* TODO: ユーザ投稿の写真を入れる？ */}
-      <img src="https://via.placeholder.com/350x200" alt="" />
+      <UserImage src="https://via.placeholder.com/350x200" alt="" />
     </Base>
   );
 };
 
-const Base = styled("div", {
-  width: "95%",
-  margin: "0 auto",
-  padding: "0 0 60px",
-
-  "& h2": {
-    fontSize: "2.5rem",
-    fontWeight: "300",
-    letterSpacing: "0.1rem",
-    lineHeight: "1.5",
-  },
-
-  "& img": {
-    display: "block",
-    width: "100%",
-    marginTop: "20px",
-  },
+const UserImage = styled("img", {
+  display: "block",
+  width: "100%",
+  marginTop: "20px",
 });
