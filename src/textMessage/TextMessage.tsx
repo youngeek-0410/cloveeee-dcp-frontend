@@ -7,9 +7,9 @@ export const TextMessage: React.FC = () => {
   return (
     <Base markerColor="blue">
       <h2>
-        あなたへの
+        あなたへ
         <br />
-        メッセージ
+        のメッセージ
       </h2>
       <MessageItem>
         <p>本当にお疲れ様でした！めちゃくちゃかっこよかったです！</p>
