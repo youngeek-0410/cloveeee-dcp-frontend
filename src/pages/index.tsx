@@ -3,7 +3,7 @@ import { GetServerSideProps, NextPage } from "next";
 
 import { backendApiUrl } from "../utils/apiUrl";
 import { Project } from "../domain/type";
-import { RootContainer } from "../Root";
+import { RootContainer } from "../RootContainer";
 
 type GetProjectApiRequest = {
   text_message_limit: number;
