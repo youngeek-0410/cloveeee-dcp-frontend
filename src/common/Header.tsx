@@ -1,19 +1,20 @@
 import React from "react";
 
+// import { Project } from "../domain/type";
 import { styled } from "../stitches.config";
 
-export const Header: React.FC = () => {
+export const Header: React.FC<{ topText: string; receiverName: string }> = ({ topText, receiverName }) => {
   return (
     <header>
-      <BackgroundImage>
+      <BackgroundImage style={{ backgroundImage: topText }}>
         {
           // NOTE: Top Text を入れたい
-          //<TopText>こうよう祭実行委員お疲れさまでした！</TopText>
+          // <TopText>{project.top_text}</TopText>
         }
       </BackgroundImage>
       <Texts>
         <div>
-          <ReceiverName>山田けいすけさんへ</ReceiverName>
+          <ReceiverName>{receiverName}さんへ</ReceiverName>
           <PresentsBy>
             <p>presents by </p>
             <img src="https://res.cloudinary.com/drb9hgnv3/image/upload/v1671063427/logo_pcmicx.svg" alt="" />

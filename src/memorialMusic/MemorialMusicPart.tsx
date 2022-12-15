@@ -1,12 +1,12 @@
 import React from "react";
 
-import { exampleSpotifyMusic } from "../mocks/examples";
+import { SpotifyMusic } from "../domain/type";
 import { styled } from "../stitches.config";
 import { Base } from "../utils/ui";
 
 import { MusicPlayground } from "./MusicPlayground";
 
-export const MemorialMusic: React.FC = () => {
+export const MemorialMusicPart: React.FC<{ spotifyMusic: SpotifyMusic }> = ({ spotifyMusic }) => {
   return (
     <Base markerColor="orange">
       <h2>
@@ -20,7 +20,7 @@ export const MemorialMusic: React.FC = () => {
         <br />
         再生ボタンを押すと音楽を聴くことができます
       </p>
-      <MusicPlayground spotifyMusic={exampleSpotifyMusic} />
+      <MusicPlayground spotifyMusic={spotifyMusic} />
     </Base>
   );
 };

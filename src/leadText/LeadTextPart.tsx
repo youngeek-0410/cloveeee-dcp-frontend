@@ -1,9 +1,10 @@
 import React from "react";
 
+import { ImageMessage } from "../domain/type";
 import { styled } from "../stitches.config";
 import { Base } from "../utils/ui";
 
-export const LeadText: React.FC = () => {
+export const LeadTextPart: React.FC<{ photoUrl: ImageMessage[] }> = ({ photoUrl }) => {
   return (
     <Base>
       <h2>

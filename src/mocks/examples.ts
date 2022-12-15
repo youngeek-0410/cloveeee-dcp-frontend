@@ -2,26 +2,20 @@ import { ImageMessage, Project, SpotifyMusic, TextMessage } from "../domain/type
 
 export const exampleImageMessages: ImageMessage[] = [
   {
-    url: "https://d2i9ue9bd8dtii.cloudfront.net/media/message_images/1ihF45s/DSC_7191_qZby4Qz.JPG",
+    url: "https://via.placeholder.com/350x200",
     sender_name: "sora",
     height: 669,
     width: 1003,
   },
   {
-    url: "https://d2i9ue9bd8dtii.cloudfront.net/media/message_images/1ihF45s/DSC_7190_Kth8Bsw.JPG",
+    url: "https://via.placeholder.com/350x200",
     sender_name: "sora",
     height: 669,
     width: 1003,
   },
   {
-    url: "https://d2i9ue9bd8dtii.cloudfront.net/media/message_images/1ihF45s/DSC_7191.JPG",
-    sender_name: "いつき",
-    height: 669,
-    width: 1003,
-  },
-  {
-    url: "https://d2i9ue9bd8dtii.cloudfront.net/media/message_images/1ihF45s/DSC_7190.JPG",
-    sender_name: "いつき",
+    url: "https://via.placeholder.com/350x200",
+    sender_name: "sora",
     height: 669,
     width: 1003,
   },
@@ -29,28 +23,12 @@ export const exampleImageMessages: ImageMessage[] = [
 
 export const exampleTextMessages: TextMessage[] = [
   {
-    text: "Great Job",
+    text: "お疲れさまでした！とても頼りになりました！！",
     sender_name: "sora",
   },
   {
     text: "Thanks!!",
     sender_name: "いつき",
-  },
-  {
-    text: "けいすーけです",
-    sender_name: "山田圭介",
-  },
-  {
-    text: "けいすーけです",
-    sender_name: "山田圭介",
-  },
-  {
-    text: "けいすーけです",
-    sender_name: "山田圭介",
-  },
-  {
-    text: "けいすーけです",
-    sender_name: "山田圭介",
   },
   {
     text: "けいすーけです",
@@ -64,7 +42,7 @@ export const exampleSpotifyMusic: SpotifyMusic = {
 
 export const exampleProject: Project = {
   project_id: "1ihF45s",
-  receiver_name: "manato",
+  receiver_name: "山田けいすけ",
   top_text: "こうよう祭お疲れ様でした！",
   top_image: {
     url: "https://d2i9ue9bd8dtii.cloudfront.net/media/message_images/1ihF45s/DSC_7191_qZby4Qz.JPG",

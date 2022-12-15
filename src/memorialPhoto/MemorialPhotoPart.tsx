@@ -1,9 +1,10 @@
 import React from "react";
 
+import { ImageMessage } from "../domain/type";
 import { styled } from "../stitches.config";
 import { Base } from "../utils/ui";
 
-export const MemorialPhoto: React.FC = () => {
+export const MemorialPhotoPart: React.FC<{ photos: ImageMessage[] }> = ({ photos }) => {
   return (
     <Base markerColor="red">
       <h2>
@@ -12,9 +13,9 @@ export const MemorialPhoto: React.FC = () => {
         写真
       </h2>
       <p>あなたと一緒に過ごした日々が残っています</p>
-      <TmpPhoto src="https://via.placeholder.com/350x200" alt="" />
-      <TmpPhoto src="https://via.placeholder.com/350x200" alt="" />
-      <TmpPhoto src="https://via.placeholder.com/350x200" alt="" />
+      {photos.map((photo, i) => {
+        return <TmpPhoto key={i} src={photo.url} alt="" />;
+      })}
     </Base>
   );
 };
