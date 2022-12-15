@@ -1,8 +1,8 @@
 import React from "react";
 
-import { Header } from "./Header";
-import { LeadText } from "./LeadText";
-import { Music } from "./Music";
+import { Header } from "./header/Header";
+import { LeadText } from "./leadText/LeadText";
+import { Music } from "./music/Music";
 
 export const MainContent: React.FC = () => {
   return (

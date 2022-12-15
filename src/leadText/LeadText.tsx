@@ -1,7 +1,7 @@
 import React from "react";
 
-import { styled } from "./stitches.config";
-import { Base } from "./utils/ui";
+import { styled } from "../stitches.config";
+import { Base } from "../utils/ui";
 
 export const LeadText: React.FC = () => {
   return (
