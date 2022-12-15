@@ -16,17 +16,17 @@ export const Base = styled("div", {
     markerColor: {
       orange: {
         "& h2": {
-          background: "linear-gradient(transparent 60%, #ffdcb8 0%)",
+          background: "linear-gradient(transparent 60%, $orange 0%)",
         },
       },
       red: {
         "& h2": {
-          background: "linear-gradient(transparent 60%, #ffb8b8 0%)",
+          background: "linear-gradient(transparent 60%, $red 0%)",
         },
       },
       blue: {
         "& h2": {
-          background: "linear-gradient(transparent 60%, #b8f7ff 0%)",
+          background: "linear-gradient(transparent 60%, $blue 0%)",
         },
       },
     },
