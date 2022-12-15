@@ -30,8 +30,8 @@ export const FirstLoadView: React.FC<Props> = ({ receiverName, onLoadComplete })
         delay: 1,
       }}
     >
-      <Typed strings={[`${receiverName}さんへ`]} typeSpeed={150} startDelay={100} onComplete={onTypeComplete} />
-      <motion.p
+      <ReceiverName strings={[`${receiverName}さんへ`]} typeSpeed={130} startDelay={10} onComplete={onTypeComplete} />
+      <PresentsBy
         style={{ opacity: 0 }}
         animate={pControls}
         transition={{
@@ -39,8 +39,9 @@ export const FirstLoadView: React.FC<Props> = ({ receiverName, onLoadComplete })
           delay: 0.5,
         }}
       >
-        Presents by Cloveeee.
-      </motion.p>
+        <p>presents by</p>
+        <img src="https://res.cloudinary.com/drb9hgnv3/image/upload/v1671063427/logo_pcmicx.svg" alt="" />
+      </PresentsBy>
     </Base>
   );
 };
@@ -57,3 +58,25 @@ const Base = motion(
     letterSpacing: "0.1em",
   })
 );
+
+const ReceiverName = styled(Typed, {
+  fontSize: "2.0rem",
+  fontWeight: "300",
+});
+
+const PresentsBy = styled(motion.div, {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  marginTop: "16px",
+  letterSpacing: "0.1rem",
+  "& p": {
+    fontStyle: "italic",
+    fontSize: "1rem",
+    fontWeight: "300",
+    marginRight: "10px",
+  },
+  "& img": {
+    width: "40px",
+  },
+});

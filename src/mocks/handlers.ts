@@ -1,6 +1,6 @@
 import { rest } from "msw";
 
-import { backendApiUrl } from "../apiUrl";
+import { backendApiUrl } from "../utils/apiUrl";
 
 import { exampleImageMessages, exampleProject, exampleTextMessages } from "./examples";
 

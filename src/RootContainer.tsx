@@ -1,15 +1,16 @@
 import { motion, useAnimationControls } from "framer-motion";
 import React, { useEffect, useState } from "react";
 
-import { FirstLoadView } from "./common/FirstLoadView/FirstLoadView";
+import { FirstLoadView } from "./common/firstLoadView/FirstLoadView";
 import { Project } from "./domain/type";
+import { MainContent } from "./MainContent";
 import { styled } from "./stitches.config";
 
 type Props = {
-  project: Project;
+  project?: Project;
 };
 
-const RootContainer: React.FC<Props> = ({ project }) => {
+export const RootContainer: React.FC<Props> = ({ project }) => {
   const [isFirstLoadCompoleted, setIsFirstLoadCompleted] = useState(false);
   const mainPartControls = useAnimationControls();
   const onFirstLoadComplete = () => {
@@ -17,7 +18,7 @@ const RootContainer: React.FC<Props> = ({ project }) => {
   };
 
   useEffect(() => {
-    // NOTE: render直後に実行したい
+    // NOTE: first loading 直後に実行したい
     mainPartControls.start({
       opacity: 1,
     });
@@ -27,10 +28,10 @@ const RootContainer: React.FC<Props> = ({ project }) => {
     <>
       {!isFirstLoadCompoleted ? (
         <FirstLoadPart>
-          <FirstLoadView receiverName={project.receiver_name} onLoadComplete={onFirstLoadComplete} />
+          <FirstLoadView receiverName="山田けいすけ" onLoadComplete={onFirstLoadComplete} />
         </FirstLoadPart>
       ) : (
-        <MainPart
+        <motion.div
           animate={mainPartControls}
           style={{ opacity: 0, overflow: "hidden" }}
           transition={{
@@ -38,8 +39,8 @@ const RootContainer: React.FC<Props> = ({ project }) => {
             delay: 0.2,
           }}
         >
-          <Root project={project} />
-        </MainPart>
+          <MainContent />
+        </motion.div>
       )}
     </>
   );
@@ -53,11 +54,3 @@ const FirstLoadPart = styled("div", {
   width: "100vw",
   height: "100vh",
 });
-export const MainPart = motion(styled("div", {}));
-
-export default RootContainer;
-
-const Root: React.FC<Props> = ({ project }) => {
-  const senderNameList = project.text_messages.items.map((message) => message.sender_name);
-  return <div></div>;
-};
