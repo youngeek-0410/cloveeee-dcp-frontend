@@ -21,7 +21,11 @@ export const Footer: React.FC = () => {
         </Senders>
         <Copyright>
           {" "}
-          Copyright 2022 powered by <a href="https://cloveeee.com">Cloveeee</a>.
+          Copyright 2022 powered by{" "}
+          <a href="https://cloveeee.com" target="_blanck" rel="noopener noreferrer">
+            Cloveeee
+          </a>
+          .
         </Copyright>
       </StyledFooter>
     </>
@@ -41,7 +45,7 @@ const Senders = styled("div", {
     letterSpacing: "0.1rem",
     lineHeight: "1.5",
     display: "inline",
-    background: "linear-gradient(transparent 60%, #b8ffc7 0%)",
+    background: "linear-gradient(transparent 60%, $green 0%)",
   },
 });
 
@@ -60,10 +64,10 @@ const SenderNameList = styled("ul", {
 });
 
 const Copyright = styled("p", {
-  borderTop: "1px solid #999",
+  borderTop: "1px solid $grey",
   margin: 0,
   padding: "8px 0",
-  color: "#999",
+  color: "$grey",
   textAlign: "center",
   fontSize: "12px",
 });
