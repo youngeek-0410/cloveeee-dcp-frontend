@@ -3,7 +3,7 @@ import React from "react";
 import { styled } from "../stitches.config";
 import { Base } from "../utils/ui";
 
-export const Music: React.FC = () => {
+export const MemorialMusic: React.FC = () => {
   return (
     <Base>
       <h2>
