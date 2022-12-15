@@ -60,7 +60,8 @@ const Base = motion(
 );
 
 const ReceiverName = styled(Typed, {
-  fontSize: "2.5rem",
+  fontSize: "2.0rem",
+  fontWeight: "300",
 });
 
 const PresentsBy = styled(motion.div, {
