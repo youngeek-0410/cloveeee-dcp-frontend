@@ -37,7 +37,7 @@ const StyledFooter = styled("footer", {
 });
 
 const Senders = styled("div", {
-  width: "90%",
+  width: "95%",
   margin: "0 auto 20px",
   h3: {
     fontSize: "1.5rem",
