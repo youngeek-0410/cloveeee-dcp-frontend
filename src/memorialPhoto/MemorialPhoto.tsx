@@ -15,10 +15,6 @@ export const MemorialPhoto: React.FC = () => {
       <TmpPhoto src="https://via.placeholder.com/350x200" alt="" />
       <TmpPhoto src="https://via.placeholder.com/350x200" alt="" />
       <TmpPhoto src="https://via.placeholder.com/350x200" alt="" />
-      <TmpPhoto src="https://via.placeholder.com/350x200" alt="" />
-      <TmpPhoto src="https://via.placeholder.com/350x200" alt="" />
-      <TmpPhoto src="https://via.placeholder.com/350x200" alt="" />
-      <TmpPhoto src="https://via.placeholder.com/350x200" alt="" />
     </Base>
   );
 };

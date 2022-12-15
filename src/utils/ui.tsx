@@ -24,6 +24,11 @@ export const Base = styled("div", {
           background: "linear-gradient(transparent 60%, #ffb8b8 0%)",
         },
       },
+      blue: {
+        "& h2": {
+          background: "linear-gradient(transparent 60%, #b8f7ff 0%)",
+        },
+      },
     },
   },
 });

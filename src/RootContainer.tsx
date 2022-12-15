@@ -18,7 +18,7 @@ export const RootContainer: React.FC<Props> = ({ project }) => {
   };
 
   useEffect(() => {
-    // NOTE: render直後に実行したい
+    // NOTE: first loading 直後に実行したい
     mainPartControls.start({
       opacity: 1,
     });
