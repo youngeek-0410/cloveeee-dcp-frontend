@@ -44,7 +44,7 @@ const App = ({ Component, pageProps }: AppPropsWithLayout<GeneralPageProps>) => 
           content={`このサイトは${pageProps.project.receiver_name}さんのWebサイトです。${pageProps.project.receiver_name}さん、${pageProps.project.top_text}`}
         />
         <meta key="og:image" property="og:image" content={pageProps.project.top_image.url} />
-        <link rel="icon" href="https://images.igsr5.com/l/riujrfe.png" />
+        <link rel="icon" href="https://res.cloudinary.com/drb9hgnv3/image/upload/v1671063427/logo_pcmicx.svg" />
       </Head>
       <Component {...pageProps} />
     </>
