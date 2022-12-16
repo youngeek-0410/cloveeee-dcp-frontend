@@ -1,11 +1,9 @@
-import axios, { AxiosRequestConfig } from "axios";
 import { GetServerSideProps, NextPage } from "next";
 
-import { backendApiUrl } from "../../utils/apiUrl";
 import { Project } from "../../domain/type";
 import { GeneralPageProps } from "../_app";
 import { RootContainer } from "../../RootContainer";
-// import { exampleProject } from "../../mocks/examples";
+import { getProject } from "../../utils/apis";
 
 type GetProjectApiRequest = {
   text_message_limit: number;
@@ -29,22 +27,7 @@ const Page: NextPage<Props> = (props) => {
 export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
   const { project_id } = ctx.query;
 
-  const params: GetProjectApiRequest = {
-    text_message_limit: 20, // NOTE: まだ件数が多い時の仕様が固まってないので適当な値
-    image_message_limit: 20, // NOTE: まだ件数が多い時の仕様が固まってないので適当な値
-  };
-
-  const requestConfig: AxiosRequestConfig<GetProjectApiRequest> = {
-    url: `${backendApiUrl}/api/projects/${project_id}/`,
-    method: "GET",
-    params,
-    headers: {
-      Accept: "application/json",
-      "content-type": "application/json",
-    },
-  };
-
-  const { data, status } = await axios.request<GetProjectApiResponse>(requestConfig);
+  const { project, status } = await getProject(project_id as string);
   if (status === 404) {
     return {
       notFound: true,
@@ -55,7 +38,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
 
   return {
     props: {
-      project: data,
+      project,
     },
   };
 };
