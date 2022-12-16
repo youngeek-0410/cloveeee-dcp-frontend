@@ -18,7 +18,7 @@ export const Footer: React.FC<{ textMessages: TextMessage[] }> = ({ textMessages
         <Copyright>
           {" "}
           Copyright 2022 powered by{" "}
-          <a href="https://cloveeee.com" target="_blanck" rel="noopener noreferrer">
+          <a href="https://app.cloveeee.com" target="_blanck" rel="noopener noreferrer">
             Cloveeee
           </a>
           .
