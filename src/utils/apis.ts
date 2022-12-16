@@ -34,3 +34,14 @@ export const getProject = async (project_id: string): Promise<{ project: Project
   if (status !== 200) throw new Error("failed to get project data");
   return { project: data, status };
 };
+
+type GetAllProjectIDsResponse = {
+  project_ids: string[];
+};
+
+type ProjectIDList = string[];
+export const GetAllProjectIDs = async (): Promise<ProjectIDList> => {
+  const { data, status } = await backendApiClient.get<GetAllProjectIDsResponse>(`/api/projects/all_id/`);
+  if (status !== 200) throw new Error("failed to get project data");
+  return data.project_ids;
+};
