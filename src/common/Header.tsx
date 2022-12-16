@@ -6,15 +6,11 @@ import { styled } from "../stitches.config";
 export const Header: React.FC<{ topText: string; receiverName: string }> = ({ topText, receiverName }) => {
   return (
     <header>
-      <BackgroundImage style={{ backgroundImage: topText }}>
-        {
-          // NOTE: Top Text を入れたい
-          // <TopText>{project.top_text}</TopText>
-        }
-      </BackgroundImage>
+      <BackgroundImage style={{ backgroundImage: topText }}></BackgroundImage>
       <Texts>
         <div>
           <ReceiverName>{receiverName}さんへ</ReceiverName>
+          <TopText>{topText}</TopText>
           <PresentsBy>
             <p>presents by </p>
             <img src="https://res.cloudinary.com/drb9hgnv3/image/upload/v1671063427/logo_pcmicx.svg" alt="" />
@@ -31,20 +27,14 @@ const BackgroundImage = styled("div", {
   backgroundImage:
     "url('https://images.unsplash.com/photo-1645075960701-573cbc669de6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2080&q=80')",
   backgroundSize: "cover",
-  // position: "relative",
 });
 
-// const TopText = styled("p", {
-//   position: "relative",
-//   width: "90%",
-//   top: "50%",
-//   left: "3%",
-//   fontSize: "24px",
-//   fontWeight: "300",
-//   letterSpacing: "0.1rem",
-//   display: "inline",
-//   background: "linear-gradient(transparent 30%, #ffdcb8 0%)",
-// });
+const TopText = styled("p", {
+  fontSize: "16px",
+  fontWeight: "300",
+  letterSpacing: "0.1rem",
+  display: "inline",
+});
 
 const Texts = styled("div", {
   height: "50vh",
