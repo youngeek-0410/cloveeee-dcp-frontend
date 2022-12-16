@@ -25,7 +25,7 @@ export const getStaticPaths = async () => {
   const allProjectIds = await GetAllProjectIDs();
 
   const paths = [
-    allProjectIds.map((id) => {
+    ...allProjectIds.map((id) => {
       return {
         params: { project_id: id },
       };
