@@ -24,13 +24,14 @@ export const getStaticProps: GetStaticProps<Props, { project_id: string }> = asy
 export const getStaticPaths = async () => {
   const allProjectIds = await GetAllProjectIDs();
 
-  const paths = [
-    ...allProjectIds.map((id) => {
-      return {
-        params: { project_id: id },
-      };
-    }),
-  ];
+  // const paths = [
+  //   ...allProjectIds.map((id) => {
+  //     return {
+  //       params: { project_id: id },
+  //     };
+  //   }),
+  // ];
+  const paths = [{ params: { project_id: "mxTaUJh" } }];
 
   return { paths, fallback: false };
 };
