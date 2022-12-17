@@ -14,14 +14,15 @@ export const MemorialPhotoPart: React.FC<{ photos: ImageMessage[] }> = ({ photos
       </h2>
       <p>あなたと一緒に過ごした日々が残っています</p>
       {photos.map((photo, i) => {
-        return <TmpPhoto key={i} src={photo.url} alt="" />;
+        return <Photo key={i} src={photo.url} alt="" />;
       })}
     </Base>
   );
 };
 
-const TmpPhoto = styled("img", {
+const Photo = styled("img", {
   display: "block",
   width: "100%",
   marginTop: "20px",
+  borderRadius: "4px",
 });
