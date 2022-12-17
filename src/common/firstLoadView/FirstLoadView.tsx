@@ -39,7 +39,7 @@ export const FirstLoadView: React.FC<Props> = ({ receiverName, onLoadComplete })
           delay: 0.5,
         }}
       >
-        <p>presents by</p>
+        <p>presented by</p>
         <img src="https://res.cloudinary.com/drb9hgnv3/image/upload/v1671063427/logo_pcmicx.svg" alt="" />
       </PresentsBy>
     </Base>
