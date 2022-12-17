@@ -1,12 +1,19 @@
 import React from "react";
 
+// eslint-disable-next-line import/order
+import { Image } from "../domain/type";
+
 // import { Project } from "../domain/type";
 import { styled } from "../stitches.config";
 
-export const Header: React.FC<{ topText: string; receiverName: string }> = ({ topText, receiverName }) => {
+export const Header: React.FC<{ topText: string; topImage: Image; receiverName: string }> = ({
+  topText,
+  topImage,
+  receiverName,
+}) => {
   return (
     <header>
-      <BackgroundImage style={{ backgroundImage: topText }}></BackgroundImage>
+      <BackgroundImage style={{ backgroundImage: `url(${topImage.url})` }}></BackgroundImage>
       <Texts>
         <div>
           <ReceiverName>{receiverName}さんへ</ReceiverName>
@@ -24,8 +31,6 @@ export const Header: React.FC<{ topText: string; receiverName: string }> = ({ to
 const BackgroundImage = styled("div", {
   width: "100%",
   height: "50vh",
-  backgroundImage:
-    "url('https://images.unsplash.com/photo-1645075960701-573cbc669de6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2080&q=80')",
   backgroundSize: "cover",
 });
 

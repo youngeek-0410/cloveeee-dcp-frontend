@@ -11,7 +11,7 @@ import { Project } from "./domain/type";
 export const MainContent: React.FC<{ project: Project }> = ({ project }) => {
   return (
     <>
-      <Header topText={project.top_text} receiverName={project.receiver_name} />
+      <Header topText={project.top_text} topImage={project.top_image} receiverName={project.receiver_name} />
       <LeadTextPart topImage={project.top_image} />
       <MemorialMusicPart spotifyMusic={project.spotify_music} />
       <MemorialPhotoPart photos={project.image_messages.items} />

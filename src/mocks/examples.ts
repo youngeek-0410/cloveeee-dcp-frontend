@@ -45,7 +45,7 @@ export const exampleProject: Project = {
   receiver_name: "加藤 愛斗",
   spotify_music: { uri: "spotify:album:6uqewERWZ1vzfCcin1zFIp" },
   top_text: "副実行委員長お疲れさまでした！！",
-  top_image: { url: "https://d2i9ue9bd8dtii.cloudfront.net/media/message_images/mxTaUJh/124381.jpg" },
+  top_image: { url: "https://d2i9ue9bd8dtii.cloudfront.net/media/message_images/4nMfzYF/124383.jpg" },
   text_messages: {
     items: [
       {
