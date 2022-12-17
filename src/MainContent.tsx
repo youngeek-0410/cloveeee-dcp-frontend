@@ -12,7 +12,7 @@ export const MainContent: React.FC<{ project: Project }> = ({ project }) => {
   return (
     <>
       <Header topText={project.top_text} receiverName={project.receiver_name} />
-      <LeadTextPart photoUrl={project.image_messages.items} />
+      <LeadTextPart topImage={project.top_image} />
       <MemorialMusicPart spotifyMusic={project.spotify_music} />
       <MemorialPhotoPart photos={project.image_messages.items} />
       <TextMessagePart textMessages={project.text_messages.items} />
