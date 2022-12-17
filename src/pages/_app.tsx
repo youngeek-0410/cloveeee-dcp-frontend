@@ -34,18 +34,20 @@ const App = ({ Component, pageProps }: AppPropsWithLayout<GeneralPageProps>) => 
 
   return getLayout(
     <>
-      <Head>
-        <title>{pageProps.project.receiver_name}さんのWebサイト</title>
-        <meta key="og:title" property="og:title" content={`${pageProps.project.receiver_name}さんのWebサイト`} />
-        <meta property="og:type" content="website" />
-        <meta
-          key="og:description"
-          property="og:description"
-          content={`このサイトは${pageProps.project.receiver_name}さんのWebサイトです。${pageProps.project.receiver_name}さん、${pageProps.project.top_text}`}
-        />
-        <meta key="og:image" property="og:image" content={pageProps.project.top_image.url} />
-        <link rel="icon" href="https://res.cloudinary.com/drb9hgnv3/image/upload/v1671063427/logo_pcmicx.svg" />
-      </Head>
+      {pageProps.project?.top_image.url && pageProps.project?.receiver_name ? (
+        <Head>
+          <title>{pageProps.project.receiver_name}さんのWebサイト</title>
+          <meta key="og:title" property="og:title" content={`${pageProps.project.receiver_name}さんのWebサイト`} />
+          <meta property="og:type" content="website" />
+          <meta
+            key="og:description"
+            property="og:description"
+            content={`このサイトは${pageProps.project.receiver_name}さんのWebサイトです。${pageProps.project.receiver_name}さん、${pageProps.project.top_text}`}
+          />
+          <meta key="og:image" property="og:image" content={pageProps.project.top_image.url} />
+          <link rel="icon" href="https://res.cloudinary.com/drb9hgnv3/image/upload/v1671063427/logo_pcmicx.svg" />
+        </Head>
+      ) : null}
       <Component {...pageProps} />
     </>
   );
