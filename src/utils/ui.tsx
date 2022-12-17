@@ -1,7 +1,7 @@
 import { styled } from "../stitches.config";
 
 export const Base = styled("div", {
-  width: "95%",
+  width: "90%",
   margin: "0 auto",
   padding: "50px 0",
 

@@ -52,7 +52,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
   //
   return {
     props: {
-      // project: data,
+      project: exampleProject,
     },
   };
 };
