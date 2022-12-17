@@ -16,7 +16,7 @@ export const TextMessagePart: React.FC<{ textMessages: TextMessage[] }> = ({ tex
         return (
           <MessageItem key={i}>
             <p>{textMessage.text}</p>
-            <p>{textMessage.sender_name}</p>
+            <p style={{ textAlign: "right" }}>{textMessage.sender_name}</p>
           </MessageItem>
         );
       })}
@@ -26,7 +26,8 @@ export const TextMessagePart: React.FC<{ textMessages: TextMessage[] }> = ({ tex
 
 const MessageItem = styled("div", {
   margin: "16px 0",
-  padding: "8px 4px",
+  padding: "8px",
+  borderRadius: "2px",
   border: "1px solid #666666",
   "& p": {},
 });
